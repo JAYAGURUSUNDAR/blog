@@ -1,0 +1,19 @@
+{% extends "base.htm" %}
+
+{% block title %}Blog{% endblock title %}
+
+
+{% block content %}
+<div class="con" style="margin-top: 6%;">
+<h1 style="text-align: center; text-shadow: 5px; padding: 10px;">Featured posts</h1>
+{% for blog in blog_posts %}
+<a href="{% url 'blog:blog_detail' blog.pk %}">
+        <div class="con-inside">
+        <h1>{{ blog.title}}</h1>
+        <p>Published on {{ blog.publication_date }}</p>
+        <p>Author: {{ blog.author }}</p>
+        </div>
+</a>
+{% endfor%}
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Title{% endblock title %}</title>
+        {% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Round Table Physics</h1>
+            <nav>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <ul>
+                    <li>Home</li>
+                    <li>Create Blog</li>
+                    <li><a href="{% url 'blog:login' %}" >Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+        {% block content %}
+        {% endblock content %}
+        <footer>
+            <h3>&copy; {{year}} Round Table Physics</h3>
+        </footer>
+    </body>
+</html>

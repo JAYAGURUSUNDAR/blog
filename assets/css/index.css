@@ -1,0 +1,14 @@
+.con a, .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    text-decoration: none;
+    color: aliceblue;
+    border: 3px solid #fff;
+    width: 100%;
+    margin-top: 7%;
+}
+
+

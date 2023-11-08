@@ -1,0 +1,14 @@
+{% extends "base.htm" %}
+
+{% block title %}{{blog_post.title}}{% endblock title %}
+
+{% block content %}
+<div class="cont" style="margin-top: 6%;">
+    <h1>{{ blog_post.title }}</h1>
+    <p>Published on {{ blog_post.publication_date }}</p>
+    <p>Author: {{ blog_post.author }}</p>
+    <div>
+        {{ blog_post.content|safe }}
+    </div>
+</div>
+{% endblock content %}
